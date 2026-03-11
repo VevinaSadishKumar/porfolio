@@ -1,0 +1,113 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #0a0a0f;
+  color: #e0e0e0;
+}
+
+nav {
+  background: #111;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  color: #00ffcc;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #00ffcc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff00ff;
+}
+
+.section {
+  padding: 60px;
+  text-align: center;
+}
+
+.highlight {
+  color: #00ffcc;
+}
+
+.profile-pic {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.btn {
+  background: #00ffcc;
+  color: #0a0a0f;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #00ffcc;
+}
+
+.contact-info {
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.card {
+  background: #1a1a1f;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffcc33;
+}
+
+.skill-bar {
+  width: 70%;
+  margin: auto;
+}
+
+.bar {
+  background: #333;
+  height: 25px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.bar div {
+  background: linear-gradient(90deg, #00ffcc, #00aaff);
+  height: 100%;
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 5px;
+  animation: grow 2s ease-out;
+  color: #0a0a0f;
+  font-weight: bold;
+}
+
+@keyframes grow {
+  from { width: 0; }
+  to { width: inherit; }
+}

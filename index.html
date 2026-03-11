@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vevina Sadish Kumar | Portfolio</title>
+<style>
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #070a10, #0f1e2b);
+  color: #e0f7f4;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; }
+
+h1, h2, h3 {
+  color: #00ffc3;
+  letter-spacing: 1px;
+}
+
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.btn {
+  background: #00ffc3;
+  color: #0a0a0f;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+.btn:hover { background: #0077ff; color: #fff; transform: translateY(-2px); }
+
+/* ===== Navbar ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10,10,20,0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px #00ffc340;
+}
+
+nav .logo {
+  font-size: 1.6rem;
+  color: #00ffc3;
+  font-weight: bold;
+}
+
+nav .logo span { color: #0077ff; }
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #e0f7f4;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #00ffc3;
+}
+
+/* ===== Home Section ===== */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: radial-gradient(circle at top left, #004466 10%, transparent 40%), 
+              radial-gradient(circle at bottom right, #00ffc311 5%, transparent 40%);
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.home h2 {
+  color: #8ae0f2;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.home p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* ===== About Section ===== */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #0f1924;
+  border: 1px solid #00ffc330;
+  border-radius: 10px;
+  padding: 25px;
+  min-width: 250px;
+  flex: 1;
+  box-shadow: 0 0 10px #00ffc322;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #00ffc3;
+}
+
+/* ===== Skills Section ===== */
+.skill-bar {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+.skill {
+  margin: 15px 0;
+}
+
+.skill p {
+  margin-bottom: 5px;
+}
+
+.bar {
+  background: #1a2733;
+  border-radius: 4px;
+  height: 22px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  color: #0a0a0f;
+  text-align: right;
+  padding-right: 8px;
+  line-height: 22px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00ffc3, #0077ff);
+  animation: grow 1.5s ease-out forwards;
+}
+@keyframes grow { from {width: 0;} }
+
+/* ===== Projects Section ===== */
+.project-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#project-display {
+  width: 60%;
+  padding: 25px;
+  background: #0f1924;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffc333;
+  min-height: 80px;
+}
+
+/* ===== Resume Section ===== */
+.resume {
+  background: #08121d;
+  border-top: 1px solid #00ffc333;
+  padding: 60px 10%;
+  text-align: left;
+}
+
+.resume h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.resume-card {
+  background: #0f1c29;
+  border: 1px solid #00ffc322;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.resume-card h3 {
+  color: #00ffc3;
+  margin-bottom: 10px;
+}
+
+.resume-card p {
+  color: #b8dbd7;
+}
+
+.contact-info {
+  margin-top: 30px;
+  font-size: 1.05rem;
+  text-align: center;
+  color: #8ae0f2;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #0a1018;
+  color: #999;
+  font-size: 0.9rem;
+  border-top: 1px solid #00ffc322;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav>
+  <div class="logo"><span>Vevina_Portfolio</span></div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#resume">Resume</a></li>
+  </ul>
+</nav>
+
+<!-- ===== Home ===== -->
+<section id="home" class="section home">
+  <h1>Hi, I'm <span style="color:#00ffc3;">Vevina Sadish Kumar</span></h1>
+  <h2>Plant Tissue Culture Specialist | Agriculture Biotechnologist | Biofertilizer Resercher</h2>
+  <p>
+    I’m a biotechnologist working on plants, biofertilizers, and sustainable agriculture to help farmers grow healthier crops and protect nature.
+My goal is to develop eco-friendly technologies that improve soil health and increase crop productivitys grow healthier crops and protect nature
+  </p>
+  <a href="#resume" class="btn">View My Resume</a>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <div class="card">
+      <h3>Education</h3>
+      <p>Bachelor of Technology – Bio Technology <br>
+      <strong>SRM Institute of Science and Technology</strong></p>
+    </div>
+    <div class="card">
+      <h3>Certifications</h3>
+      <p>Certificate in Biochemistry - IITM<br>
+         Certificate in Cell Biology:Cellular Organization, Division and Processes - IITM<br>
+         </p>
+    </div>
+    <div class="card">
+      <h3>Passion</h3>
+      <p>I am passionate about agricultural biotechnology because it helps improve crops, support farmers, and protect nature using science</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Skills ===== -->
+<section id="skills" class="section">
+  <h2>Technical Skills</h2>
+  <div class="skill-bar">
+    <div class="skill"><p>1.</p><div class="bar"><div style="width:85%">85%</div></div></div>
+    <div class="skill"><p>2.</p><div class="bar"><div style="width:80%">80%</div></div></div>
+    <div class="skill"><p>3.</p><div class="bar"><div style="width:75%">75%</div></div></div>
+    <div class="skill"><p>4.</p><div class="bar"><div style="width:70%">70%</div></div></div>
+    <div class="skill"><p>5.</p><div class="bar"><div style="width:65%">65%</div></div></div>
+    <div class="skill"><p>6.</p><div class="bar"><div style="width:90%">90%</div></div></div>
+  </div>
+</section>
+
+<!-- ===== Projects ===== -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="project-slider">
+    <button class="btn" onclick="prevProject()">◀</button>
+    <div id="project-display"></div>
+    <button class="btn" onclick="nextProject()">▶</button>
+  </div>
+</section>
+
+<!-- ===== Resume ===== -->
+<section id="resume" class="resume">
+  <h2>Resume</h2>
+
+  <div class="resume-card">
+    <h3>SSLC</h3>
+    <p>Malar Public School </p>
+  </div>
+
+  <div class="resume-card">
+    <h3>HSC </h3>
+    <p>Sri Chaitanya Techno School</p>
+    <p>2023–2025 </p>
+  </div>
+
+  <div class="resume-card">
+    <h3>Bachelor Degree</h3>
+    <p>
+      Bachelor of Technology – Bio Technology<br>
+      SRM Institute of Science and Technology <br>
+      2025 – 2029
+    </p>
+  </div>
+
+  <div class="contact-info">
+    📞 +91 95972 49619<br>
+    ✉️ vevina.win@gmail.com
+  </div>
+</section>
+
+<footer> Vevina Sadish Kumar </footer>
+
+<script>
+let projects = [
+  
+];
+let currentProject = 0;
+function showProject() {
+  document.getElementById("project-display").innerText = projects[currentProject];
+}
+function nextProject() {
+  currentProject = (currentProject + 1) % projects.length;
+  showProject();
+}
+function prevProject() {
+  currentProject = (currentProject - 1 + projects.length) % projects.length;
+  showProject();
+}
+showProject();
+</script>
+</body>
+</html>
